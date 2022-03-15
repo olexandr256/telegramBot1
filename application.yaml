@@ -1,0 +1,7 @@
+telegram:
+  api-url: "https://api.telegram.org/"
+  webhook-path: "https://3ecc-217-196-161-143.ngrok.io"
+  bot-name: "@user_open_wether_bot"
+  bot-token: "5105732887:AAEhXIuMUuwD_mF_v-a34eQP-SBcAxcin7o>"
+server:
+  port: "80"
