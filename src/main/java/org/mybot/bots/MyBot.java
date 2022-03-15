@@ -2,27 +2,34 @@ package org.mybot.bots;
 
 import lombok.SneakyThrows;
 import org.mybot.response.OpenWeather;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 @Component
 public class MyBot extends TelegramLongPollingBot {
-    private final String username = "user_open_wether_bot";
-    private final String token = "5105732887:AAEhXIuMUuwD_mF_v-a34eQP-SBcAxcin7o";
+    private static final String BOT_USERNAME = "@user_open_wether_bot";
+    private static final String BOT_TOKEN = "5105732887:AAEhXIuMUuwD_mF_v-a34eQP-SBcAxcin7o";
 //    private String city;
+
+
+//    public MyBot(@Value("${bot.BOT_TOKEN}") String BOT_TOKEN, @Value("${bot.BOT_USERNAME}") String BOT_USERNAME) {
+//        this.BOT_TOKEN = BOT_TOKEN;
+//        this.BOT_USERNAME = BOT_USERNAME;
+//    }
+
 
     @Override
     public String getBotUsername() {
-        return username;
+        return BOT_USERNAME;
     }
 
     @Override
     public String getBotToken() {
-        return token;
+        return BOT_TOKEN;
     }
 
     @SneakyThrows
