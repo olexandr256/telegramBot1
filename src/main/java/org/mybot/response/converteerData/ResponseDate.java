@@ -15,7 +15,7 @@ public class ResponseDate {
         String pattern = " HH год. mm хв";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 //                System.out.println(date);
-        return simpleDateFormat.format(new Date((long)dateInput*1000));
+        return simpleDateFormat.format(new Date(((long)dateInput+2*3600)*1000));
 //        return String.valueOf(dateInput/3600/24);
     }
 }
